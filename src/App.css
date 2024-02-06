@@ -1,0 +1,59 @@
+.app-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.icon {
+  width: 3rem;
+  padding: 10px;
+}
+
+.app-container {
+  /* background-color: rgba(29,29,32,255); */
+  background-color: rgb(32, 32, 32);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: rgb(150, 150, 150);
+}
+
+.app-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 10vw;
+  font-size: 30px;
+}
+
+.app-body h1 {
+  margin: 0;
+  color: rgb(224, 224, 224);
+}
+
+.app-body h2 {
+  color: rgb(200, 200, 200);
+}
+
+.app-body h3 {
+  color: rgb(180, 180, 180);
+}
+
+.app-body h4 {
+  color: rgb(160, 160, 160);
+}
+
+.choice-buttons button {
+  font-size: 20px;
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.project-heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

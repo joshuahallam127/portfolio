@@ -27,7 +27,15 @@ function App() {
   return (
     <div className='app-container'>
       <div className='app-body'>
-        <h1>JOSHUA HALLAM</h1>
+        <div className='app-header'>
+          <a href="https://www.linkedin.com/in/joshua-hallam-b4516b258/" target="_blank" rel="noopener noreferrer">
+            <img className='icon' src="/portfolio/linkedin-icon.png" alt="LinkedIn"/>
+          </a>
+          <h1>JOSHUA HALLAM</h1>
+          <a href="https://github.com/joshuahallam127" target="_blank" rel="noopener noreferrer">
+            <img className='icon' src="/portfolio/github-icon.png" alt="Github"/>
+          </a>
+        </div>
         <h2>Full Stack Developer (not designer)</h2>
         <div>
           <div className='choice-buttons'>
@@ -87,7 +95,7 @@ function App() {
                 </a>
                 <div>
                   <video controls width="600" height="400">
-                      <source src="https://private-user-images.githubusercontent.com/104524708/303412318-3fe5298d-3968-4a17-9695-d1bb2b32f86b.mp4?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDc0MTI4MTksIm5iZiI6MTcwNzQxMjUxOSwicGF0aCI6Ii8xMDQ1MjQ3MDgvMzAzNDEyMzE4LTNmZTUyOThkLTM5NjgtNGExNy05Njk1LWQxYmIyYjMyZjg2Yi5tcDQ_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMjA4JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDIwOFQxNzE1MTlaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1iOGM3NDMyNmJmYjMzMjI2ODM5NTQ4OGRkZjA1NWE0OWU0ZDk0MWYyNjMyNmMzMTAyMzFhMzc4ZmI2MzQxNjU1JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.upSiom-HvML9nFR-6_Lo3Rw89uqdyY0ciLAfk8pVP-w" type="video/mp4" />
+                      <source src="https://github.com/joshuahallam127/Unix-Terminal-Clone/assets/104524708/edfc6973-e080-44f5-831a-9ce9004a218c" type="video/mp4" />
                       {/* Provide multiple source elements for cross-browser compatibility */}
                       {/* <source src="path_to_your_video.webm" type="video/webm" /> */}
                       {/* <source src="path_to_your_video.ogg" type="video/ogg" /> */}
@@ -109,7 +117,7 @@ function App() {
                 </a>
                 <div>
                   <video controls width="600" height="400">
-                      <source src="https://private-user-images.githubusercontent.com/104524708/303422123-4377584d-6351-449a-9a3e-6915c22d21ed.mp4?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDc0MTI3NzIsIm5iZiI6MTcwNzQxMjQ3MiwicGF0aCI6Ii8xMDQ1MjQ3MDgvMzAzNDIyMTIzLTQzNzc1ODRkLTYzNTEtNDQ5YS05YTNlLTY5MTVjMjJkMjFlZC5tcDQ_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMjA4JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDIwOFQxNzE0MzJaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1lNGExNjkzY2U5NTBlM2VhNjNjY2VlMzllNDcyMjVlOGQ0YzQ4ZDU2MWY3NDk4YWUwODg0ZTk2ZDI3MmM5MjFiJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.dKbr4KSbWezTAjbfQpIhp9mdamRhoYb9aBqe2huLmxk" type="video/mp4" />
+                      <source src="https://github.com/joshuahallam127/Pacman-ish-Game-plus-Extensions/assets/104524708/6753d142-8c8f-4bf4-a313-635d71aae954" type="video/mp4" />
                       {/* Provide multiple source elements for cross-browser compatibility */}
                       {/* <source src="path_to_your_video.webm" type="video/webm" /> */}
                       {/* <source src="path_to_your_video.ogg" type="video/ogg" /> */}

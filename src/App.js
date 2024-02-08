@@ -1,20 +1,6 @@
 import './App.css';
 import React, { useState } from 'react';
 
-const HeadingBanner = () => (
-  <div className='app-header'>
-    <img className='icon' src='/trading-simulator/trading-logo.jpg'/>
-    <div>
-      <a href="https://github.com/joshuahallam127" target="_blank" rel="noopener noreferrer">
-        <img className='icon' src="/github-icon.png" alt="Github"/>
-      </a>
-      <a href="https://www.linkedin.com/in/joshua-hallam-b4516b258/" target="_blank" rel="noopener noreferrer">
-        <img className='icon' src="/linkedin-icon.png" alt="LinkedIn"/>
-      </a>
-    </div>
-  </div>
-)
-
 function App() {
   const [onProjects, setOnProjects] = useState(true);
   const [onAbout, setOnAbout] = useState(false);
@@ -65,24 +51,71 @@ function App() {
               <h3>Projects</h3>
               <div className='project'>
                 <div className='project-heading'>
-                  <h4>Trading Simulator</h4>
-                  <h4>React, Javascript, HTML, CSS, Python, Flask, SQL</h4>
+                  <h4>The Trading Simulator</h4>
+                  <h4>React, JavaScript, Python, Flask, SQL, HTML, CSS</h4>
                 </div>
-                <p>Trading Simulator allows you to choose any publicly listed US stock, download its past data and then
+                <p>The Trading Simulator allows you to choose any publicly listed US stock, download its past data and then
                   practice your trading skills by buying and selling the stock with the ability to fast forward time to increase
-                  your learning speed. The website is built with React, Flask, and MySQL. The website is hosted on Github Pages,
-                  the backend is hosted on Render, and the MySQL is hosted on Aiven. 
+                  your learning speed. To download and trade with
+                  any stock data, the frontend takes in user input and sends it to my flask backend, which then queries the 
+                  Alpha Vantage API to download the stock data, and then cleans it, sorts it, and stores it in my MySQL database
+                  for later use in the simulator. 
                 </p>
-                <a href="https://joshuahallam127.github.io/trading-simulator" target="_blank" rel="noopener noreferrer" >
-                  View Site
-                </a>
+                <div className='links'>
+                  <a href="https://joshuahallam127.github.io/trading-simulator" target="_blank" rel="noopener noreferrer" >
+                    View Site
+                  </a>
+                  <a href="https://github.com/joshuahallam127/trading-simulator" target="_blank" rel="noopener noreferrer" >
+                    Frontend Code
+                  </a>
+                  <a href="https://github.com/joshuahallam127/backend-trading-simulator" target="_blank" rel="noopener noreferrer" >
+                    Backend Code
+                  </a>
+                </div>
               </div>
               <div className='project'>
-                <h4>Weather App</h4>
-                <p>Weather App is a web application that uses the OpenWeatherMap API to get weather data. The app is built with React and hosted on GitHub Pages. The code is hosted on GitHub.</p>
-                <a href="https://joshuahallam127.github.io/weather-app" target="_blank" rel="noopener noreferrer">
-                  View Site
+                <div className='project-heading'>
+                  <h4>Linux Virtual Machine (school assignment)</h4>
+                  <h4>Python</h4>
+                </div>
+                <p>The virtual machine simulates a linux terminal, allowing you to run the following commands:
+                  pwd, cd, mkdir, touch, cp, mv, rm, rmdir, chmod, chown, adduser, deluser, su, ls. The virtual machine
+                  keeps track of directory structure, users, their permissions and file permissions.
+                </p>
+                <a href="https://github.com/joshuahallam127/Unix-Terminal-Clone" target="_blank" rel="noopener noreferrer">
+                  View GitHub Repo
                 </a>
+                <div>
+                  <video controls width="600" height="400">
+                      <source src="https://private-user-images.githubusercontent.com/104524708/303412318-3fe5298d-3968-4a17-9695-d1bb2b32f86b.mp4?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDc0MTI4MTksIm5iZiI6MTcwNzQxMjUxOSwicGF0aCI6Ii8xMDQ1MjQ3MDgvMzAzNDEyMzE4LTNmZTUyOThkLTM5NjgtNGExNy05Njk1LWQxYmIyYjMyZjg2Yi5tcDQ_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMjA4JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDIwOFQxNzE1MTlaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1iOGM3NDMyNmJmYjMzMjI2ODM5NTQ4OGRkZjA1NWE0OWU0ZDk0MWYyNjMyNmMzMTAyMzFhMzc4ZmI2MzQxNjU1JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.upSiom-HvML9nFR-6_Lo3Rw89uqdyY0ciLAfk8pVP-w" type="video/mp4" />
+                      {/* Provide multiple source elements for cross-browser compatibility */}
+                      {/* <source src="path_to_your_video.webm" type="video/webm" /> */}
+                      {/* <source src="path_to_your_video.ogg" type="video/ogg" /> */}
+                      Your browser does not support the video tag.
+                  </video>
+                </div>
+              </div>
+              <div className='project'>
+                <div className='project-heading'>
+                  <h4>Pacman Game (school assignment)</h4>
+                  <h4>Java, Gradle, OOP, JUnit</h4>
+                </div>
+                <p>
+                  Parody of the classic Pacman game. In this version, the player is a wizard, and there are some extra features
+                  such as being able to create your own maps, break walls, and use teleporters.
+                </p>
+                <a href="https://github.com/joshuahallam127/Pacman-ish-Game-plus-Extensions" target="_blank" rel="noopener noreferrer">
+                  View GitHub Repo
+                </a>
+                <div>
+                  <video controls width="600" height="400">
+                      <source src="https://private-user-images.githubusercontent.com/104524708/303422123-4377584d-6351-449a-9a3e-6915c22d21ed.mp4?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDc0MTI3NzIsIm5iZiI6MTcwNzQxMjQ3MiwicGF0aCI6Ii8xMDQ1MjQ3MDgvMzAzNDIyMTIzLTQzNzc1ODRkLTYzNTEtNDQ5YS05YTNlLTY5MTVjMjJkMjFlZC5tcDQ_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMjA4JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDIwOFQxNzE0MzJaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1lNGExNjkzY2U5NTBlM2VhNjNjY2VlMzllNDcyMjVlOGQ0YzQ4ZDU2MWY3NDk4YWUwODg0ZTk2ZDI3MmM5MjFiJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.dKbr4KSbWezTAjbfQpIhp9mdamRhoYb9aBqe2huLmxk" type="video/mp4" />
+                      {/* Provide multiple source elements for cross-browser compatibility */}
+                      {/* <source src="path_to_your_video.webm" type="video/webm" /> */}
+                      {/* <source src="path_to_your_video.ogg" type="video/ogg" /> */}
+                      Your browser does not support the video tag.
+                  </video>
+                </div>
               </div>
             </div>
           }

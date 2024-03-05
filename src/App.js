@@ -80,10 +80,16 @@ function App() {
                     Backend Code
                   </a>
                 </div>
+                <div>
+                  <video controls width="600" height="400">
+                      <source src="https://github.com/joshuahallam127/trading-simulator/assets/104524708/e4329a0b-f29f-43cb-adc5-5e465a31dd06" type="video/mp4" />
+                      Your browser does not support the video tag.
+                  </video>
+                </div>
               </div>
               <div className='project'>
                 <div className='project-heading'>
-                  <h4>Linux Virtual Machine (school assignment)</h4>
+                  <h4>Linux Virtual Machine</h4>
                   <h4>Python</h4>
                 </div>
                 <p>The virtual machine simulates a linux terminal, allowing you to run the following commands:
@@ -96,16 +102,13 @@ function App() {
                 <div>
                   <video controls width="600" height="400">
                       <source src="https://github.com/joshuahallam127/Unix-Terminal-Clone/assets/104524708/edfc6973-e080-44f5-831a-9ce9004a218c" type="video/mp4" />
-                      {/* Provide multiple source elements for cross-browser compatibility */}
-                      {/* <source src="path_to_your_video.webm" type="video/webm" /> */}
-                      {/* <source src="path_to_your_video.ogg" type="video/ogg" /> */}
                       Your browser does not support the video tag.
                   </video>
                 </div>
               </div>
               <div className='project'>
                 <div className='project-heading'>
-                  <h4>Pacman Game (school assignment)</h4>
+                  <h4>Pacman Game</h4>
                   <h4>Java, Gradle, OOP, JUnit</h4>
                 </div>
                 <p>
@@ -118,9 +121,6 @@ function App() {
                 <div>
                   <video controls width="600" height="400">
                       <source src="https://github.com/joshuahallam127/Pacman-ish-Game-plus-Extensions/assets/104524708/6753d142-8c8f-4bf4-a313-635d71aae954" type="video/mp4" />
-                      {/* Provide multiple source elements for cross-browser compatibility */}
-                      {/* <source src="path_to_your_video.webm" type="video/webm" /> */}
-                      {/* <source src="path_to_your_video.ogg" type="video/ogg" /> */}
                       Your browser does not support the video tag.
                   </video>
                 </div>
@@ -141,8 +141,11 @@ function App() {
           {onContact &&
             <div>
               <h3>Contact</h3>
-              {/* <p>Email: joshuahallam127@gmail.com</p>
-              <p>Phone: 0499 444 003</p> */}
+              <p>Email: joshuahallam127@gmail.com</p>
+              <p>Phone: 0499 444 003</p>
+              <a href="https://www.linkedin.com/in/joshua-hallam-b4516b258/" target="_blank" rel="noopener noreferrer">
+                <p>LinkedIn</p>
+              </a>
             </div>
           } 
         </div>

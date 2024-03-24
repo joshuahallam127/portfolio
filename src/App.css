@@ -12,14 +12,14 @@
 }
 
 .app-container {
-  background-color: rgb(20, 20, 20);
+  background-color: rgb(18, 18, 18);
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   color: rgb(150, 150, 150);
 }
 
-.app-body {
+.app {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -27,24 +27,25 @@
   font-size: 25px;
 }
 
-.app-body h1 {
+
+.app h1 {
   margin: 0;
   color: rgb(224, 224, 224);
 }
 
-.app-body h2 {
+.app h2 {
   color: rgb(200, 200, 200);
 }
 
-.app-body h3 {
+.app h3 {
   color: rgb(180, 180, 180);
 }
 
-.app-body h4 {
+.app h4 {
   color: rgb(160, 160, 160);
 }
 
-.app-body p {
+.app p {
   margin-top: 0;
 }
 

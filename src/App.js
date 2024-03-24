@@ -26,7 +26,7 @@ function App() {
 
   return (
     <div className='app-container'>
-      <div className='app-body'>
+      <div className='app'>
         <div className='app-header'>
           <a href="https://www.linkedin.com/in/joshua-hallam-b4516b258/" target="_blank" rel="noopener noreferrer">
             <img className='icon' src="/portfolio/linkedin-icon.png" alt="LinkedIn"/>
@@ -37,7 +37,7 @@ function App() {
           </a>
         </div>
         <h2>Full Stack Developer (not designer)</h2>
-        <div>
+        <div className>
           <div className='choice-buttons'>
             <button 
               onClick={handleProjectsClick} 
@@ -53,7 +53,7 @@ function App() {
                       color: onContact ? 'rgb(16, 16, 16)' : 'rgb(224, 224, 224)'}}>Contact</button>
           </div>
         </div>
-        <div className='content'>
+        <div>
           {onProjects && 
             <div>
               <h3>Projects</h3>

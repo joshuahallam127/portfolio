@@ -1,5 +1,6 @@
 import './App.css';
 import React, { useState } from 'react';
+import Nav from './Components/Nav';
 
 function App() {
   const [onProjects, setOnProjects] = useState(true);
@@ -23,6 +24,16 @@ function App() {
     setOnAbout(false);
     setOnContact(true);
   }
+
+  return (
+    <div>
+      <Nav />
+      <div className='homepage'>
+        <h1>JOSHUA HALLAM</h1>
+      </div>
+    </div>
+
+  )
 
   return (
     <div className='app-container'>

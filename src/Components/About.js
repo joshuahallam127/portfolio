@@ -11,11 +11,9 @@ import {
   FaCss3,
   FaPython,
   FaJava,
-  FaDatabase,
-  FaC
+  FaDatabase
 } from "react-icons/fa";
 import { DiJavascript1 } from "react-icons/di";
-import { Link } from 'react-router-dom';
 
 const Skill = ({ skill }) => {
   const icon = {
@@ -54,18 +52,17 @@ const About = () => {
         </p>
         <h2 style={{marginTop:'10vh'}}>SKILLS</h2>
         <div className='skills'>
-          <Skill skill='HTML' />
-          <Skill skill='CSS' />
-          <Skill skill='Javascript' />
-          <Skill skill='C++' />
-          <Skill skill='React' />
-          <Skill skill='Git' />
-          <Skill skill='Github' />
-          <Skill skill='Npm' />
           <Skill skill='Python' />
           <Skill skill='Java' />
-          {/* <Skill skill='C' /> */}
           <Skill skill='SQL' />
+          <Skill skill='C++' />
+          <Skill skill='Javascript' />
+          <Skill skill='React' />
+          <Skill skill='HTML' />
+          <Skill skill='CSS' />
+          <Skill skill='Git' />
+          <Skill skill='Github' />
+          {/* <Skill skill='C' /> */}
         </div>
 
       </div>

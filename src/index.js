@@ -5,7 +5,7 @@ import Projects from './Components/Projects';
 import About from './Components/About';
 import Contact from './Components/Contact';
 import reportWebVitals from './reportWebVitals';
-import { createRoot } from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 
 const router = createBrowserRouter([

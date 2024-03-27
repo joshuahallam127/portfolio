@@ -3,12 +3,19 @@
     background-color: #0a192f
 }
 
+.twopages {
+    display: flex;
+    flex-direction: row;
+    width: 200%;
+}
+
 .projects-body {
+    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 10vh 20vw;
+    padding: 5vh 0;
     font-size: 1.8rem;
     color: rgb(180, 180, 180);
 }
@@ -25,18 +32,67 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-}
-
-.project {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    margin-top: 30px;
 }
 
 .project-box {
-    width: 300px;
-    height: 300px;
-    margin: 0px 25px 25px 0px;
-    transition: 0.5s;
+    width: 20vw;
+    height: 35vh;
     cursor: pointer;
+    border: 3px solid black;
+    border-radius: 5px;
+    text-align: center;
+    padding: 15px;
+    letter-spacing: 0.5px;
+    font-size: 1.2rem;
+    margin: 0px 25px 50px 25px;
+    transition: 0.4s;
+    /* position: relative; */
 }
+
+.project-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.5);
+}
+
+.project-box button {
+    /* margin: 0px 10px; */
+    padding: 10px 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    transition: 0.3s;
+    cursor: pointer;
+    /* position: absolute;
+    bottom: 0; */
+}
+
+.project-box button:hover {
+    background-color: black;
+    color: white;
+}
+
+.page.active {
+    transform: translateX(0);
+}
+
+.page:not(.active) {
+    transform: translateX(-100%);
+    /* position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; */
+    transition: 0.8s;
+}
+
+/* .page.project-detail {
+    transform: translateX(100%);
+} */
+
+/* .page.active.project-detail {
+    transform: translateX(0);
+} */
+

@@ -1,8 +1,9 @@
 import React from 'react';
 import './index.css';
-import App from './App';
 import Home from './Components/Home';
 import Projects from './Components/Projects';
+import About from './Components/About';
+import Contact from './Components/Contact';
 import reportWebVitals from './reportWebVitals';
 import { createRoot } from 'react-dom';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
@@ -15,6 +16,14 @@ const router = createBrowserRouter([
   {
     path: '/portfolio/projects',
     element: <Projects />
+  },
+  {
+    path: '/portfolio/about',
+    element: <About />
+  },
+  {
+    path: '/portfolio/contact',
+    element: <Contact />
   }
 ]);
 

@@ -14,7 +14,7 @@
 }
 
 .nav-link {
-    padding: 1rem 1.5rem;
+    padding: 1rem 2rem;
     margin: 0 1rem;
     font-size: 1.5rem;
     border: none;
@@ -22,7 +22,7 @@
     cursor: pointer;
     transition: color 0.3s ease;
     text-decoration: none;
-    background: black;
+    /* background: black; */
 }
 
 .nav-link:hover {

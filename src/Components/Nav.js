@@ -1,6 +1,7 @@
 import React from 'react';
 import './Nav.css';
 import { Link } from 'react-router-dom';
+import { BsPerson, BsCodeSlash, BsEnvelope, BsHouse } from 'react-icons/bs';
 
 const Nav = () => {
   return (
@@ -10,14 +11,14 @@ const Nav = () => {
           <img className='nav-icon' src="/portfolio/linkedin-icon.png" alt="LinkedIn"/>
         </a>
         <a href="https://github.com/joshuahallam127" target="_blank" rel="noopener noreferrer">
-          <img className='icon' src="/portfolio/github-icon.png" alt="Github"/>
+          <img className='nav-icon' src="/portfolio/github-icon.png" alt="Github"/>
         </a>
       </div>
       <div className='nav-links'>
-        <Link className='nav-link' to='/portfolio'>Home</Link>
-        <Link className='nav-link' to='/portfolio/about'>About</Link>
-        <Link className='nav-link' to='/portfolio/projects'>Projects</Link>
-        <Link className='nav-link' to='/portfolio/contact'>Contact</Link>
+        <Link className='nav-link' to='/portfolio'><BsHouse /> Home</Link>
+        <Link className='nav-link' to='/portfolio/about'><BsPerson /> About</Link>
+        <Link className='nav-link' to='/portfolio/projects'><BsCodeSlash /> Projects</Link>
+        <Link className='nav-link' to='/portfolio/contact'><BsEnvelope /> Contact</Link>
       </div>
     </div>
   )

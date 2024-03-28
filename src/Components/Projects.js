@@ -17,11 +17,19 @@ const ProjectsPage = ({ active, setCurrProject }) => {
   return (
     <div className={`projects-body page ${active ? 'active' : ''}`}>
       <h1>PROJECTS</h1>
+      <div className='featured'>
+        <h2>Featured</h2>
+      </div>
       <div className='projects'>
         <Project
           title='The Trading Simulator'
           description='Choose any US stock and simulate trading it over the time interval you choose using real historical data!'
         />
+      </div>
+      <div className='other'>
+        <h2>Other Projects</h2>
+      </div>
+      <div className='projects'>
         <Project
           title='Unix Terminal Clone'
           description='A clone of the Unix terminal allowing you to create files, directories, and navigate through
@@ -86,24 +94,25 @@ const ProjectPage = ( {active, setCurrProject, project }) => {
 
   return (
     <div className={`page project-detail ${active ? 'active' : ''}`}>
-      <button onClick={() => setCurrProject('')}>Back</button>
       {project ? 
       <>
         <h1>{project.toUpperCase()}</h1>
         <p>{data[project]?.description}</p>
-        <a href={data[project]?.githubLink} target="_blank" rel="noopener noreferrer">
-          View GitHub Repo
-        </a>
-        {data[project]?.websiteLink ?
-        <a href={data[project]?.websiteLink} target="_blank" rel="noopener noreferrer">
-          View Site
-        </a> : null}
+        <div>
+          <a className='button-link' href={data[project]?.githubLink} target="_blank" rel="noopener noreferrer">
+            View GitHub Repo
+          </a>
+          {data[project]?.websiteLink ?
+          <a className='button-link' href={data[project]?.websiteLink} target="_blank" rel="noopener noreferrer">
+            View Site
+          </a> : null}
+        </div>
         <video controls width="600" height="400">
           <source src={data[project]?.videoLink} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </> : null}
-      
+      <button className='back-button' onClick={() => setCurrProject('')}>Back</button>
     </div>
   )
 

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './Projects.css';
 import Nav from './Nav';
 
@@ -43,15 +43,6 @@ const ProjectsPage = ({ active, setCurrProject }) => {
 }
 
 const ProjectPage = ( {active, setCurrProject, project }) => {
-  const [title, setTitle] = useState('');
-  useEffect(() => {
-    if (title) {
-      setTitle(project.toUpperCase());
-    }
-  }, [project]);
-
-  console.log(project);
-
   const data = {
     'The Trading Simulator': {
       description: `The trading simulator allows you to choose any publicly listed US stock,
@@ -68,49 +59,51 @@ const ProjectPage = ( {active, setCurrProject, project }) => {
       websiteLink: 'https://joshuahallam127.github.io/trading-simulator'
     },
 
-    'UNIX TERMINAL CLONE': {
-      description: 'The virtual machine simulates a linux terminal, allowing you to run the following \
-      commands: pwd, cd, mkdir, touch, cp, mv, rm, rmdir, chmod, chown, adduser, deluser, su, ls. The virtual \
-      machine keeps track of directory structure, users, their permissions and file permissions.',
+    'Unix Terminal Clone': {
+      description: `The virtual machine simulates a linux terminal, allowing you to run the following
+      commands: pwd, cd, mkdir, touch, cp, mv, rm, rmdir, chmod, chown, adduser, deluser, su, ls. The virtual
+      machine keeps track of directory structure, users, their permissions and file permissions.`,
 
       videoLink: 'https://github.com/joshuahallam127/Unix-Terminal-Clone/assets/104524708/edfc6973-e080-44f5-831a-9ce9004a218c',
 
       githubLink: 'https://github.com/joshuahallam127/Unix-Terminal-Clone'
     },
 
-    'PACMAN GAME': {
-      description: 'Parody of the classic Pacman game. In this version, the player is a wizard, and there are \
-      some extra features such as map creation and teleportation!',
+    'Pacman Game': {
+      description: `Parody of the classic Pacman game. In this version, the player is a wizard, and there are
+      some extra features such as map creation and teleportation!`,
 
       videoLink: 'https://github.com/joshuahallam127/Pacman-ish-Game-plus-Extensions/assets/104524708/6753d142-8c8f-4bf4-a313-635d71aae954',
 
       githubLink: 'https://github.com/joshuahallam127/Pacman-ish-Game-plus-Extensions'
     },
 
-    'ASSEMBLY INTERPRETER': {
-      description: 'An interpreter for a custom assembly language that takes in a binary file representing \
-      the assembly code and then acts as a virtual machine to execute the code.',
+    'Assembly Interpreter': {
+      description: `An interpreter for a custom assembly language that takes in a binary file representing
+      the assembly code and then acts as a virtual machine to execute the code.`,
     }
   }
-
-  console.log(data[title]?.videoLink);
 
   return (
     <div className={`page project-detail ${active ? 'active' : ''}`}>
       <button onClick={() => setCurrProject('')}>Back</button>
-      <h1>{title}</h1>
-      <p>{data[title]?.description}</p>
-      <a href={data[title]?.githubLink} target="_blank" rel="noopener noreferrer">
-        View GitHub Repo
-      </a>
-      {/* <video controls width="600" height="400">
-          <source src='https://github.com/joshuahallam127/trading-simulator/assets/104524708/e4329a0b-f29f-43cb-adc5-5e465a31dd06' type="video/mp4" />
-          Your browser does not support the video tag.
-      </video> */}
-      <video controls width="600" height="400">
+      {project ? 
+      <>
+        <h1>{project.toUpperCase()}</h1>
+        <p>{data[project]?.description}</p>
+        <a href={data[project]?.githubLink} target="_blank" rel="noopener noreferrer">
+          View GitHub Repo
+        </a>
+        {data[project]?.websiteLink ?
+        <a href={data[project]?.websiteLink} target="_blank" rel="noopener noreferrer">
+          View Site
+        </a> : null}
+        <video controls width="600" height="400">
           <source src={data[project]?.videoLink} type="video/mp4" />
           Your browser does not support the video tag.
-      </video>
+        </video>
+      </> : null}
+      
     </div>
   )
 
@@ -124,7 +117,6 @@ const Projects = () => {
     <div className='projectspage'>
       <Nav />
       <div className='twopages'>
-
         <ProjectsPage active={currProject === ''} setCurrProject={setCurrProject}/>
         <ProjectPage active={currProject !== ''} project={currProject} setCurrProject={setCurrProject} />
       </div>

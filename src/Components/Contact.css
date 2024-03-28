@@ -1,0 +1,19 @@
+.contactpage {
+    min-height: 100vh;
+    background-color: #0a192f
+}
+
+.contact-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10vh 20vw;
+    font-size: 1.8rem;
+    color: rgb(180, 180, 180);
+}
+
+.contact-body h1 {
+    margin: 5px;
+    color: rgb(200, 200, 200);
+}

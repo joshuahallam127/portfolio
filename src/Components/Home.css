@@ -27,18 +27,20 @@
     margin-right: 30px;
     margin-top: 20px;
     border: none;
-    background-color: #66FCF1;
-    color: #0a192f;
+    background-color: #0a192f;
+    color: #1ca0ec;
+    filter: brightness(2);
     font-size: 1.8rem;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: 0.3s ease;
     text-align: center;
     text-decoration: none;
     align-items: center;
 }
 
 .page-button:hover {
-    background-color: #45A29E;
+    /* background-color: #45A29E; */
+    filter: brightness(1.5);
 }
 
 .profile-photo {

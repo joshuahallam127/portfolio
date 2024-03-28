@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Projects.css';
 import Nav from './Nav';
 
@@ -43,16 +43,23 @@ const ProjectsPage = ({ active, setCurrProject }) => {
 }
 
 const ProjectPage = ( {active, setCurrProject, project }) => {
-  const title = project.toUpperCase();
+  const [title, setTitle] = useState('');
+  useEffect(() => {
+    if (title) {
+      setTitle(project.toUpperCase());
+    }
+  }, [project]);
+
+  console.log(project);
 
   const data = {
-    'THE TRADING SIMULATOR': {
-      description: 'The trading simulator allows you to choose any publicly listed US stock, \
-      download its past data, and then practice your trading skills by buying and selling the stock with \
-      the ability to fast forward time to increase your learning speed. To download and trade with any \
-      stock data, the frontend takes in user input and sends it to my flask backend, which then queries \
-      the Alpha Vantage API to download the stock data, and then cleans it, sorts it, and stores it in my \
-      MySQL database for later use in the simulator.',
+    'The Trading Simulator': {
+      description: `The trading simulator allows you to choose any publicly listed US stock,
+      download its past data, and then practice your trading skills by buying and selling the stock with
+      the ability to fast forward time to increase your learning speed. To download and trade with any
+      stock data, the frontend takes in user input and sends it to my flask backend, which then queries
+      the Alpha Vantage API to download the stock data, and then cleans it, sorts it, and stores it in my
+      MySQL database for later use in the simulator.`,
 
       videoLink: 'https://github.com/joshuahallam127/trading-simulator/assets/104524708/e4329a0b-f29f-43cb-adc5-5e465a31dd06',
 
@@ -86,6 +93,8 @@ const ProjectPage = ( {active, setCurrProject, project }) => {
     }
   }
 
+  console.log(data[title]?.videoLink);
+
   return (
     <div className={`page project-detail ${active ? 'active' : ''}`}>
       <button onClick={() => setCurrProject('')}>Back</button>
@@ -94,8 +103,12 @@ const ProjectPage = ( {active, setCurrProject, project }) => {
       <a href={data[title]?.githubLink} target="_blank" rel="noopener noreferrer">
         View GitHub Repo
       </a>
+      {/* <video controls width="600" height="400">
+          <source src='https://github.com/joshuahallam127/trading-simulator/assets/104524708/e4329a0b-f29f-43cb-adc5-5e465a31dd06' type="video/mp4" />
+          Your browser does not support the video tag.
+      </video> */}
       <video controls width="600" height="400">
-          <source src={data[title]?.videoLink} type="video/mp4" />
+          <source src={data[project]?.videoLink} type="video/mp4" />
           Your browser does not support the video tag.
       </video>
     </div>
@@ -111,7 +124,7 @@ const Projects = () => {
     <div className='projectspage'>
       <Nav />
       <div className='twopages'>
-        {/* <div style={{width: '100vw', backgroundColor: 'red'}}></div> */}
+
         <ProjectsPage active={currProject === ''} setCurrProject={setCurrProject}/>
         <ProjectPage active={currProject !== ''} project={currProject} setCurrProject={setCurrProject} />
       </div>

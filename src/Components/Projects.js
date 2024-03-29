@@ -107,7 +107,7 @@ const ProjectPage = ( {active, setCurrProject, project }) => {
             View Site
           </a> : null}
         </div>
-        <video controls width="600" height="400">
+        <video style={{marginTop:'20px'}} controls width="711" height="400">
           <source src={data[project]?.videoLink} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
